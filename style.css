@@ -1,0 +1,295 @@
+/* Definindo cores e variáveis globais */
+:root {
+    --primary-color: #024e76;
+    --secondary-color: #039be5;
+    --accent-color: #007579;
+    --light-color: #f0f8ff;
+    --text-color: #333;
+    --background-color: #fff;
+}
+
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Containers e Responsividade */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+    padding-bottom: 50px;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    opacity: 0.9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.logo h1 {
+    font-size: 2rem;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-color);
+}
+
+.header-cta {
+    text-align: center;
+    padding: 30px 0;
+    background: var(--secondary-color);
+}
+
+/* Seção Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/GeminiTubaraoBranco.jpeg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--light-color);
+    /* background: rgba(0, 0, 0, 0.4); */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.hero-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    opacity: 0.8;
+}
+
+.btn-cta:hover {
+    background-color: var(--primary-color);
+}
+
+/* Bloco de Informações */
+.info-section {
+    background-color: var(--light-color);
+    padding: 50px 0;
+}
+
+.info-section h2 {
+    margin-top: 0 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    list-style: none;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.info-list i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.info-list h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+/* Galeria */
+.gallery-section {
+    padding: 50px 0;
+    background-color: var(--background-color);
+}
+
+.gallery-section h2 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.2);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(2, 78, 118, 0.8);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--light-color);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Sessão Curiosidades */
+.curiosities-section {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 0;
+}
+
+.curiosities-section h2 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.curiosity-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.curiosity-item p {
+    font-size: 1.1rem;
+    padding-left: 20px;
+}
+
+/* Depoimentos */
+.testimonials-section {
+    background-color: var(--background-color);
+    padding: 50px 0;
+}
+
+.testimonials-section h2 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial-carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    .info-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
